@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --font-size-paragraph: 18px;
+  --outfit: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--very-dark-blue-main-BG);
+  color: white;
+  max-width: 375px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--outfit);
+  text-decoration: none;
+}
+
+#card {
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: 1em;
+  padding: 25px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.image-nft {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75em;
+}
+
+.overlay {
+  border-radius: 1em;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.view {
+  font-size: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+#presentation p {
+  color: var(--soft-blue);
+  font-size: 1.2em;
+  font-weight: 300;
+  font-size: var(--font-size-paragraph);
+}
+
+#icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#icons p,
+#author p {
+  margin: 0;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: var(--font-size-paragraph);
+}
+
+.icon:first-of-type {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.icon:nth-child(2) {
+  color: var(--soft-blue);
+}
+
+.icon > img {
+  align-self: center;
+}
+
+#line {
+  border: 1px solid var(--very-dark-blue-line);
+  margin: 20px 0;
+}
+
+#author {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-size: var(--font-size-paragraph);
+}
+
+#author img {
+  max-height: 35px;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+}
+
+/* span.creation {
+  color: var(--soft-blue);
+} */
+
+span {
+  display: inline-block;
+}
+
+#creation {
+  color: var(--soft-blue);
+}
+
+.highlight-green:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
